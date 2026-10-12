@@ -9,14 +9,29 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pChoisirUnMotDePasse1"]
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pNouveauMdp2026"]
       interval: 10s
       timeout: 5s
       retries: 3
       start_period: 30s
 
+  app:
+    image: ghcr.io/danielahsalohiarilala-lang/ad-l2-eni-devops:latest
+    container_name: tantara-app
+    restart: unless-stopped
+    depends_on:
+      mysql:
+        condition: service_healthy
+    env_file: .env
+    ports:
+      - "127.0.0.1:8000:8000"
+
+
+
 volumes:
   mysql_data:
+
+
 
 
 
