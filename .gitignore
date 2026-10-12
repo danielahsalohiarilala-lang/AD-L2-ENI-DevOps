@@ -1,2 +1,40 @@
 .env
 mysql_data/
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.turbo/
+
+# Env & secrets
+.env
+.env.local
+*.env
+
+# ML artifacts
+models/
+checkpoints/
+*.safetensors
+*.bin
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Tantara - évite doublons et backups DB
+/01_schema.sql
+tantara-db/backup*.sql
+tantara-db/*.log
+
+
