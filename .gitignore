@@ -30,3 +30,4 @@ checkpoints/
 .idea/
 .vscode/
 backup_*.sql
+*.log
