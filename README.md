@@ -19,3 +19,8 @@
 ## Lancement 
 cd tantara-db && docker compose up -d
 docker ps
+
+## Test de restauration (12/10/2026)
+- Table test créée, sauvegardée, supprimée, puis restaurée depuis le dump : OK
+- Sauvegarde auto : cron 2h, rotation 7 jours, journal dans backup.log
+
