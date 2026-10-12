@@ -29,3 +29,8 @@ checkpoints/
 .DS_Store
 .idea/
 .vscode/
+
+# Tantara - évite doublons et backups DB
+/01_schema.sql
+tantara-db/backup*.sql
+tantara-db/*.log
